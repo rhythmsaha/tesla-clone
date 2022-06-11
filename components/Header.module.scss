@@ -1,0 +1,88 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 5rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+
+  .logo {
+    object-fit: contain;
+    height: 0.8rem;
+    position: absolute;
+    left: 2rem;
+
+    @media screen and (min-width: 1024px) {
+      left: 3rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+      height: 0.9rem;
+    }
+  }
+
+  .nav__menu {
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
+
+    display: flex;
+    align-items: center;
+
+    .navlink {
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      transition: 0.3s;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 0.7rem;
+      }
+    }
+  }
+
+  .nav__right {
+    position: absolute;
+    right: 2rem;
+
+    @media screen and (min-width: 1024px) {
+      right: 3rem;
+    }
+
+    .navlink {
+      @media screen and (max-width: 1199px) {
+        display: none;
+      }
+
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      transition: 0.3s;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 0.7rem;
+      }
+    }
+
+    .menu {
+      border: none;
+      background: none;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      transition: 0.3s;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 0.7rem;
+      }
+    }
+  }
+}
