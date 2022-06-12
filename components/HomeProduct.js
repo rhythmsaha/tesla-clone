@@ -2,6 +2,7 @@
 import Link from "next/link";
 import CustomLink from "./CustomLink";
 import styles from "./HomeProduct.module.scss";
+import { FaChevronDown } from "react-icons/fa";
 
 const HomeProduct = () => {
   return (
@@ -12,18 +13,35 @@ const HomeProduct = () => {
         alt=""
       />
 
-      <div>
-        <h2>Model 3</h2>
+      <img
+        className={styles.mainImageMobile}
+        src="https://tesla-cdn.thron.com/delivery/public/image/tesla/9160c5a3-b818-42dd-bb98-b8597948c636/bvlatuR/std/1927x4096/M3-Homepage-Mobile-LHD"
+        alt=""
+      />
 
-        <div>
+      <div className={styles.content}>
+        <h2 className={styles.heading}>Model 3</h2>
+        <div className={styles.text}>
           <p>Order online for </p>
-          <Link href="">Touchless Delivery</Link>
+          <CustomLink href="" className={styles.link}>
+            Touchless Delivery
+          </CustomLink>
         </div>
       </div>
 
-      <div>
-        <CustomLink href="">CUSTOM ORDER</CustomLink>
-        <CustomLink href="">EXISTING INVENTORY</CustomLink>
+      <div className={styles.bottom}>
+        <div className={styles.actions}>
+          <CustomLink href="" className={styles.darklink}>
+            CUSTOM ORDER
+          </CustomLink>
+          <CustomLink href="" className={styles.link}>
+            EXISTING INVENTORY
+          </CustomLink>
+        </div>
+
+        <span className={styles.scrollIcon}>
+          <FaChevronDown />
+        </span>
       </div>
     </section>
   );

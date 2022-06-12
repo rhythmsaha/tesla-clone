@@ -1,9 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
+import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { useState } from "react";
 import CustomLink from "./CustomLink";
 import styles from "./Header.module.scss";
+import Sidebar from "./Sidebar";
 
 const Header = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebarHandler = () => setSidebarOpen((state) => !state);
+
   return (
     <header className={styles.header}>
       <Link href="/">
@@ -42,8 +49,14 @@ const Header = () => {
         <CustomLink className={styles.navlink} href="">
           Account
         </CustomLink>
-        <button className={styles.menu}>Menu</button>
+        <button className={styles.menu} onClick={toggleSidebarHandler}>
+          Menu
+        </button>
       </div>
+
+      <AnimatePresence>
+        {sidebarOpen && <Sidebar toggleSidebar={toggleSidebarHandler} />}
+      </AnimatePresence>
     </header>
   );
 };

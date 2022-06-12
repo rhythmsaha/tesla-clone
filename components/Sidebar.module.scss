@@ -1,0 +1,26 @@
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  background: white;
+  z-index: 20;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2rem 2rem;
+
+    .closeBtn {
+      border: none;
+      outline: none;
+      background: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 5px;
+    }
+  }
+}
