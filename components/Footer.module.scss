@@ -1,4 +1,9 @@
 .Footer {
-  position: absolute;
-  bottom: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.8rem;
 }

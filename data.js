@@ -66,7 +66,7 @@ export const products = [
   },
 
   {
-    id: "6",
+    id: "7",
     slug: "accesories",
     name: "Accesories",
     type: "other",
