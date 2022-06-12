@@ -47,9 +47,35 @@ export const products = [
     slug: "solarpanels",
     name: "Solar Panels",
     type: "solar",
+    shortdesc: "Lowest Cost Solar Panels in America",
     mainImgMobile:
       "https://tesla-cdn.thron.com/delivery/public/image/tesla/066f19b7-d68e-45e2-8575-ad0a6f8375a8/bvlatuR/std/600x1576/_25-HP-SolarPanels-M",
     mainImgDesktop:
       "https://tesla-cdn.thron.com/delivery/public/image/tesla/16b04537-a4be-4bf9-8637-86862a858da8/bvlatuR/std/2880x1800/_25-HP-SolarPanels-D",
+  },
+  {
+    id: "6",
+    slug: "solarroof",
+    name: "Solar Roof",
+    type: "solar",
+    shortdesc: "Produce Clean Energy From Your Roof",
+    mainImgMobile:
+      "https://tesla-cdn.thron.com/delivery/public/image/tesla/20c666b9-d09b-4687-bb37-22c8500489c5/bvlatuR/std/750x850/HP-SR-Design-M",
+    mainImgDesktop:
+      "https://tesla-cdn.thron.com/delivery/public/image/tesla/c877126e-0db5-409d-a412-04fc94b59b76/bvlatuR/std/2880x1800/HP-SR-Design-D",
+  },
+
+  {
+    id: "6",
+    slug: "accesories",
+    name: "Accesories",
+    type: "other",
+    shortdesc: "Produce Clean Energy From Your Roof",
+    mainImgMobile:
+      "https://tesla-cdn.thron.com/delivery/public/image/tesla/69095129-86c5-4f6c-a77a-740ceac04e82/bvlatuR/std/0x0/69095129-86c5-4f6c-a77a-740ceac04e82",
+    mainImgDesktop:
+      "https://tesla-cdn.thron.com/delivery/public/image/tesla/dd739764-bcaa-4263-9488-8c73bc9fb046/bvlatuR/std/0x0/dd739764-bcaa-4263-9488-8c73bc9fb046",
+
+    footer: true,
   },
 ];

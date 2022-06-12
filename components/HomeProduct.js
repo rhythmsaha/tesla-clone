@@ -3,8 +3,17 @@ import CustomLink from "./CustomLink";
 import styles from "./HomeProduct.module.scss";
 import { FaChevronDown } from "react-icons/fa";
 import Fade from "react-reveal/Fade";
+import Footer from "./Footer";
 
-const HomeProduct = ({ type, mobileImage, desktopImage, model, shortDesc }) => {
+const HomeProduct = ({
+  id,
+  type,
+  mobileImage,
+  desktopImage,
+  model,
+  shortDesc,
+  showFooter,
+}) => {
   return (
     <section className={styles.container}>
       <img className={styles.mainImage} src={desktopImage} alt="" />
@@ -62,9 +71,12 @@ const HomeProduct = ({ type, mobileImage, desktopImage, model, shortDesc }) => {
           </div>
         </Fade>
 
-        <span className={styles.scrollIcon}>
-          <FaChevronDown />
-        </span>
+        {id === "1" && (
+          <span className={styles.scrollIcon}>
+            <FaChevronDown />
+          </span>
+        )}
+        {showFooter && <Footer />}
       </div>
     </section>
   );
