@@ -1,9 +1,15 @@
 import Head from "next/head";
+import { useRef } from "react";
 
 import HomeProduct from "../components/HomeProduct";
 import styles from "../styles/Home.module.scss";
+import useScrollSnap from "react-use-scroll-snap";
+import { products } from "../data";
 
 export default function Home() {
+  const scrollRef = useRef(null);
+  // useScrollSnap({ ref: scrollRef, duration: 100, delay: 50 });
+
   return (
     <>
       <Head>
@@ -19,8 +25,17 @@ export default function Home() {
         />
       </Head>
 
-      <HomeProduct />
-      <HomeProduct />
+      <div ref={scrollRef}>
+        {products.map((product) => (
+          <HomeProduct
+            key={product.id}
+            type={product.type}
+            model={product.name}
+            mobileImage={product.mainImgMobile}
+            desktopImage={product.mainImgDesktop}
+          />
+        ))}
+      </div>
     </>
   );
 }
